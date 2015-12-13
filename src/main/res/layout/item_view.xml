@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:androd="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20dp"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7.00 km"
+            android:textColor="@color/colorRed"
+            android:layout_below="@+id/data"
+            android:paddingLeft="20dp"
+            android:textSize="50sp"
+            />
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/item"
+        >
+
+        <ImageView
+            android:id="@+id/emoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_smile_face"
+        />
+        <ImageView
+            android:id="@+id/road"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/emoji"
+            android:src="@mipmap/ic_road1"
+            />
+        <ImageView
+            android:id="@+id/sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/road"
+            android:src="@mipmap/ic_sun"
+            />
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emoji"
+            android:src="@mipmap/ic_round_clock"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+
+            android:layout_alignBottom="@+id/textView" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6'56"
+            android:layout_below="@+id/sun"
+            android:layout_toRightOf="@+id/clock"
+            android:textSize="15sp"
+            android:id="@+id/textView" />
+        <ImageView
+            android:id="@+id/chronometer"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/road"
+            android:src="@mipmap/ic_clock2"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+
+            android:layout_alignBottom="@+id/totalTime" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6'56"
+            android:layout_below="@+id/sun"
+            android:layout_toRightOf="@+id/chronometer"
+            android:textSize="15sp"
+            android:id="@+id/totalTime"
+            />
+
+
+    </RelativeLayout>
+</RelativeLayout>

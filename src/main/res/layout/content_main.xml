@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.devacademy.runnify.Runnify"
+    tools:showIn="@layout/runnify_main_screen">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        >
+     <TextView
+         android:id="@+id/topkm"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_alignParentTop="true"
+         android:text="@string/km"
+         android:textColor="@color/colorRed"
+         android:textStyle="bold"
+         android:textSize="96sp"/>
+        <TextView
+            android:id="@+id/totalkm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topkm"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="@string/totalkm"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/totalkm"
+            android:id="@+id/topempty"
+            >
+
+        </View>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/topempty"
+            android:id="@+id/leftempty"
+            >
+
+        </View>
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/topempty"
+            android:layout_alignParentRight="true"
+            android:id="@+id/rightempty"
+            >
+
+        </View>
+
+        <ImageView
+            android:id="@+id/run"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topempty"
+            android:layout_toLeftOf="@+id/leftempty"
+            android:layout_toEndOf="@+id/leftempty"
+            android:layout_toRightOf="@+id/timer"
+            android:src="@mipmap/ic_run" />
+
+        <ImageView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topempty"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_clock"/>
+
+        <ImageView
+            android:id="@+id/callories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_callories"
+            android:layout_below="@+id/topempty"
+            android:layout_toLeftOf="@+id/rightempty"
+            android:layout_toStartOf="@+id/rightempty" />
+        <TextView
+            android:id="@+id/textrun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 13"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@id/run"
+            android:layout_toRightOf="@id/leftempty"/>
+        <TextView
+            android:id="@+id/textrun2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Runs"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@+id/textrun"
+            android:layout_alignLeft="@+id/topkm"
+            android:layout_alignStart="@+id/topkm" />
+        <TextView
+            android:id="@+id/texttimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5:03min"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@id/timer"
+            android:layout_centerHorizontal="true">
+
+        </TextView>
+        <TextView
+            android:id="@+id/texttimber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Average Lap"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+
+            android:layout_below="@+id/textrun"
+            android:layout_centerHorizontal="true" />
+        <TextView
+
+            android:id="@+id/textcallories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1923"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="21sp"
+            android:layout_below="@+id/rightempty"
+            android:layout_toLeftOf="@+id/rightempty"
+            android:layout_toStartOf="@+id/rightempty" />
+
+        <TextView
+            android:id="@+id/textcallories2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Runnify fuel"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp"
+            android:layout_below="@+id/textcallories"
+            android:layout_alignLeft="@+id/textcallories"
+            android:layout_alignStart="@+id/textcallories" />
+
+        <TextView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="NOVEMBER 2015"
+
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_below="@id/textcallories"
+            android:textColor="@android:color/darker_gray"
+            android:background="#e0e0e0"/>
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:src="@drawable/start2"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:id="@+id/imageView" />
+
+    </RelativeLayout>
+</RelativeLayout>
